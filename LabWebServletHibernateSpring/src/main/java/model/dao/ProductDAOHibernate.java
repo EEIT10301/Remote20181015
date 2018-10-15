@@ -6,8 +6,12 @@ import java.util.List;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.stereotype.Repository;
 
+import misc.SpringJavaConfiguration;
 import model.ProductBean;
 import model.ProductDAO;
 
@@ -18,6 +22,20 @@ public class ProductDAOHibernate implements ProductDAO {
 
 	public Session getSession() {
 		return this.sessionFactory.getCurrentSession();
+	}
+	public static void main(String[] args) {
+		ApplicationContext context =
+				new AnnotationConfigApplicationContext(SpringJavaConfiguration.class);
+		
+		SessionFactory sessionFactory = (SessionFactory) context.getBean("sessionFactory");
+		sessionFactory.getCurrentSession().beginTransaction();
+
+		ProductDAO productDAO = (ProductDAO) context.getBean("productDAOHibernate");
+		List<ProductBean> selects = productDAO.select();
+		System.out.println("selects="+selects);
+
+		sessionFactory.getCurrentSession().getTransaction().commit();
+
 	}
 	@Override
 	public ProductBean select(int id) {
