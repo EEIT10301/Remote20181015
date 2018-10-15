@@ -37,12 +37,12 @@ public class LoginController {
 		}
 		if(password==null || password.length()==0) {
 			String error=context.getMessage("login.password.required", null, locale);
-			errors.put("passwordss", error);
+			errors.put("password", error);
 		}
 		
 		if(errors!=null && !errors.isEmpty()) {
 			
-			return "login.errorsss";
+			return "login.errors";
 		}
 		//呼叫model
 		CustomerBean bean = customerService.login(username, password);
