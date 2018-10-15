@@ -21,7 +21,7 @@ public class LoginController {
 	private CustomerService customerService;
 	
 	@Autowired
-	private ApplicationContext context;
+	private ApplicationContext ctx;
 	
 	@RequestMapping("/secure/login.controller")
 	public String method(String username, String password, Model model, Locale locale) {
@@ -32,11 +32,11 @@ public class LoginController {
 		
 		if(username==null || username.length()==0) {
 			errors.put("username",
-					context.getMessage("login.username.required", null, locale));
+					ctx.getMessage("login.username.required", null, locale));
 		}
 		if(password==null || password.length()==0) {
 			errors.put("password",
-					context.getMessage("login.password.required", null, locale));
+					ctx.getMessage("login.password.required", null, locale));
 		}
 		
 		if(errors!=null && !errors.isEmpty()) {
