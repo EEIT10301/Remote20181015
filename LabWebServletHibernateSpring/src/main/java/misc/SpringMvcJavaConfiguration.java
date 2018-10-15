@@ -1,5 +1,6 @@
 package misc;
 
+
 import java.util.Locale;
 
 import javax.servlet.ServletContext;
@@ -62,3 +63,4 @@ public class SpringMvcJavaConfiguration implements WebMvcConfigurer {
 		return localeResolver;
 	}
 }
+

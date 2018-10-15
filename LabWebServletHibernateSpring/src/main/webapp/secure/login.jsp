@@ -27,6 +27,7 @@
 		<td>${errors.password}</td>
 	</tr>
 	<tr>
+<<<<<<< HEAD
 		<td>
 			<select name="myLocale">
 				<option value="zh_TW">中文</option>
@@ -35,7 +36,29 @@
 				<option value="fr_FR">法文</option>
 			</select>
 		</td>
+=======
+<<<<<<< HEAD
+		<td>
+			<select name="myLocale">
+				<option value="zh_TW">中文</option>
+				<option value="en_US">英文</option>
+				<option value="de_DE">德文</option>
+				<option value="fr_FR">法文</option>
+			</select>
+		</td>
+=======
+		<td>　</td>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> branch 'master' of https://github.com/EEIT10301/Remote20181015.git
+>>>>>>> branch 'master' of https://github.com/EEIT10301/Remote20181015.git
+>>>>>>> branch 'master' of https://github.com/EEIT10301/Remote20181015.git
 		<td align="right"><input type="submit" value="Login"></td>
+=======
+		<td align=">>>>>>> branch 'master' of https://github.com/EEIT10301/Remote20181015.git
+right"><input type="submit" value="Login"></td>
+>>>>>>> branch 'master' of https://github.com/EEIT10301/Remote20181015.git
 	</tr>
 </table>
 </form>

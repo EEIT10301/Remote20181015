@@ -6,6 +6,10 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 
+
+
+
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.propertyeditors.CustomDateEditor;
 import org.springframework.context.ApplicationContext;
@@ -34,7 +38,7 @@ public class ProductController {
 	}
 	
 	@Autowired
-	private ApplicationContext context;
+	private ApplicationContext ctx;
 
 	@Autowired
 	private ProductService productService;
@@ -66,7 +70,7 @@ public class ProductController {
 		if("Insert".equals(prodaction) || "Update".equals(prodaction) || "Delete".equals(prodaction)) {
 			if(id==null || id.length()==0) {
 				Locale locale = LocaleContextHolder.getLocale();
-				errors.put("xxx1", context.getMessage(
+				errors.put("xxx1", ctx.getMessage(
 						"product.id.required", new String[] {prodaction}, locale));
 			}
 		}
@@ -109,5 +113,6 @@ public class ProductController {
 			errors.put("action", "Unknown Action:"+prodaction);
 			return "product.errors";
 		}
+
 	}
 }

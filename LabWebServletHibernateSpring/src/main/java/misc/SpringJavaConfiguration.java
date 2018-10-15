@@ -21,6 +21,7 @@ import model.ProductBean;
 @Configuration
 @ComponentScan(basePackages={"model"})
 public class SpringJavaConfiguration {
+
 	@Bean
 	public DataSource dataSource() {
 		JndiObjectFactoryBean factory = new JndiObjectFactoryBean();
