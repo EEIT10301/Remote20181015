@@ -35,6 +35,8 @@ public class ProductDAOHibernate implements ProductDAO {
 		System.out.println("selects="+selects);
 
 		sessionFactory.getCurrentSession().getTransaction().commit();
+
+
 	}
 	@Override
 	public ProductBean select(int id) {

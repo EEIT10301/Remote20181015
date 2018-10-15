@@ -20,4 +20,5 @@
 		<property name="contextRelative" value="true"></property>
 		<property name="url" value="/pages/display.jsp"></property>
 	</bean>
+
 </beans>

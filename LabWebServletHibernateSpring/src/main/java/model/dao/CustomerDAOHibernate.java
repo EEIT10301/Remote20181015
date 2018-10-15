@@ -3,6 +3,8 @@ package model.dao;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+
+
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.stereotype.Repository;
@@ -31,6 +33,7 @@ public class CustomerDAOHibernate implements CustomerDAO {
 		System.out.println("select="+select);
 
 		sessionFactory.getCurrentSession().getTransaction().commit();
+
 	}
 	@Override
 	public CustomerBean select(String custid) {
