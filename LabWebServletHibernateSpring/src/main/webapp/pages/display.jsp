@@ -28,7 +28,7 @@
 	<c:forEach var="row" items="${select}">
 		<c:url value="/pages/product.jsp" var="path">
 			<c:param name="id" value="${row.id}" />
-			<c:param name="name" value="${row.name}" />
+			<c:param name="名子" value="${row.name}" />
 			<c:param name="price" value="${row.price}" />
 			<c:param name="make" value="${row.make}" />
 			<c:param name="expire" value="${row.expire}" />
