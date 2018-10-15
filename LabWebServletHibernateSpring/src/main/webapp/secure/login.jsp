@@ -38,8 +38,13 @@
 		</td>
 =======
 		<td>　</td>
+<<<<<<< HEAD
 >>>>>>> branch 'master' of https://github.com/EEIT10301/Remote20181015.git
 		<td align="right"><input type="submit" value="Login"></td>
+=======
+		<td align=">>>>>>> branch 'master' of https://github.com/EEIT10301/Remote20181015.git
+right"><input type="submit" value="Login"></td>
+>>>>>>> branch 'master' of https://github.com/EEIT10301/Remote20181015.git
 	</tr>
 </table>
 </form>
