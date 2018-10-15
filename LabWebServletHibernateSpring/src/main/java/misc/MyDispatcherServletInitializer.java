@@ -4,6 +4,7 @@ import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatche
 
 public class MyDispatcherServletInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
 
+<<<<<<< HEAD
 	@Override
 	protected Class<?>[] getRootConfigClasses() {
 		System.out.println("ContextLoaderListener");
@@ -19,6 +20,29 @@ public class MyDispatcherServletInitializer extends AbstractAnnotationConfigDisp
 		return new String[] {"/"};
 	}
 
+=======
+
+	@Override
+	protected Class<?>[] getRootConfigClasses() {
+		System.out.println("contexloderlistener");
+		return new Class[] {SpringJavaConfiguration.class};
+	}
+//  <param-name>contextClass</param-name>
+//  <param-value>org.springframework.web.context.support.AnnotationConfigWebApplicationContext</param-value>
+//  <param-name>contextConfigLocation</param-name>
+//  <param-value>misc.SpringJavaConfiguration</param-value>
+// <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	@Override
+	protected Class<?>[] getServletConfigClasses() {
+		System.out.println("DispatcherServletlistener");
+		return new Class[] {SpringMvcJavaConfiguration.class};
+	}
+
+	@Override
+	protected String[] getServletMappings() {
+		return new String[] {"/","*.css","*.png","*.jpg","*.js"};
+	}
+>>>>>>> branch 'master' of https://github.com/EEIT10301/Remote20181015.git
 
 //  <servlet>
 //    <servlet-name>DispatcherServlet</servlet-name>
@@ -37,5 +61,8 @@ public class MyDispatcherServletInitializer extends AbstractAnnotationConfigDisp
 //    <servlet-name>DispatcherServlet</servlet-name>
 //    <url-pattern>/</url-pattern>
 //  </servlet-mapping>
+<<<<<<< HEAD
 
+=======
+>>>>>>> branch 'master' of https://github.com/EEIT10301/Remote20181015.git
 }

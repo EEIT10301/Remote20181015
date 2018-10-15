@@ -6,6 +6,10 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> branch 'master' of https://github.com/EEIT10301/Remote20181015.git
 @Service
 public class ProductService {
 	@Autowired

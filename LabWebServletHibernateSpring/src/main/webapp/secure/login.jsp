@@ -51,6 +51,9 @@
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> branch 'master' of https://github.com/EEIT10301/Remote20181015.git
 >>>>>>> branch 'master' of https://github.com/EEIT10301/Remote20181015.git
 >>>>>>> branch 'master' of https://github.com/EEIT10301/Remote20181015.git
 >>>>>>> branch 'master' of https://github.com/EEIT10301/Remote20181015.git

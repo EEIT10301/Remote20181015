@@ -25,6 +25,7 @@ public class EncodingFilter implements Filter {
 
 
 		System.out.println("Servlet執行之前的前置作業");
+<<<<<<< HEAD
 
 		request.setCharacterEncoding("UTF-8");
 		chain.doFilter(request, response);
@@ -34,6 +35,33 @@ public class EncodingFilter implements Filter {
 	public void init(FilterConfig filterConfig) throws ServletException {
 		this.filterConfig = filterConfig;
 	}
+=======
+		request.setCharacterEncoding("UTF-8");
+//		if(前置作業：我不滿意) {
+//			request.getRequestDispatcher("").forward(request, response);
+//			return;
+//		}
+		
+		chain.doFilter(request, response);			//呼叫Servlet
+//		if(呼叫Servlet：我不滿意) {
+//			request.getRequestDispatcher("").forward(request, response);
+//			return;
+//		}
+		
+		System.out.println("Servlet執行之後的後續功能");
+//		if(後續功能：我不滿意) {
+//			request.getRequestDispatcher("......").forward(request, response);
+//			return;
+//		}
+	}
+
+	private FilterConfig filterConfig;
+	@Override
+	public void init(FilterConfig filterConfig) throws ServletException {
+		this.filterConfig = filterConfig;
+	}
+
+>>>>>>> branch 'master' of https://github.com/EEIT10301/Remote20181015.git
 	@Override
 	public void destroy() {
 

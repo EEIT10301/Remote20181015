@@ -3,6 +3,7 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
+<<<<<<< HEAD
 
 
 	<bean id="login.errors"
@@ -19,6 +20,23 @@
 		<property name="url" value="/pages/product.jsp"></property>
 	</bean>
 	<bean id="product.select" class="org.springframework.web.servlet.view.InternalResourceView">
+=======
+	<bean id="login.errors"
+		class="org.springframework.web.servlet.view.InternalResourceView">
+		<property name="url" value="/secure/login.jsp"></property>
+	</bean>
+	<bean id="login.success" class="org.springframework.web.servlet.view.RedirectView">
+	<property name="contextRelative" value="true"></property>
+	<property name="url" value="/index.jsp"></property>
+	</bean>
+	<bean id="product.errors"
+		class="org.springframework.web.servlet.view.InternalResourceView">
+		<property name="url" value="/pages/product.jsp"></property>
+	</bean>
+	<bean id="display"
+		class="org.springframework.web.servlet.view.RedirectView">
+		<property name="contextRelative" value="true"></property>
+>>>>>>> branch 'master' of https://github.com/EEIT10301/Remote20181015.git
 		<property name="url" value="/pages/display.jsp"></property>
 	</bean>
 
