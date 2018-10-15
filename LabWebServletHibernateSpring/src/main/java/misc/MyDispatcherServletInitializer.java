@@ -4,6 +4,8 @@ import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatche
 
 public class MyDispatcherServletInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
 
+
+
 	@Override
 	protected Class<?>[] getRootConfigClasses() {
 		System.out.println("contexloderlistener");

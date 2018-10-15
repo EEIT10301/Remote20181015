@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.propertyeditors.CustomDateEditor;
 import org.springframework.context.ApplicationContext;
@@ -30,6 +31,7 @@ public class ProductController {
 		webDataBinder.registerCustomEditor(double.class, "price", new PrimitiveNumberEditor(Double.class, true));
 		webDataBinder.registerCustomEditor(int.class, new PrimitiveNumberEditor(Integer.class, true));
 	}
+
 
 
 	@Autowired
@@ -107,6 +109,10 @@ public class ProductController {
 			return "product.errors";
 		}
 
+
+
 	}
 
+
 }
+

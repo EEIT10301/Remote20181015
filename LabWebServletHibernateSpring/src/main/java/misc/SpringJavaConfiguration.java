@@ -3,6 +3,8 @@ package misc;
 import java.util.Properties;
 
 
+
+
 import javax.naming.NamingException;
 import javax.sql.DataSource;
 
@@ -22,6 +24,7 @@ import model.ProductBean;
 @Configuration
 @ComponentScan(basePackages={"model"})
 public class SpringJavaConfiguration {
+
 	
 
 	@Bean

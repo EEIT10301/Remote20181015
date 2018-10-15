@@ -25,7 +25,9 @@ public class EncodingFilter implements Filter {
 
 
 
+
 		System.out.println("Servlet執行前的前置作業");
+
 
 		request.setCharacterEncoding("UTF-8");
 //		if(前置作業：我不滿意) {
@@ -51,6 +53,8 @@ public class EncodingFilter implements Filter {
 	public void init(FilterConfig filterConfig) throws ServletException {
 		this.filterConfig = filterConfig;
 	}
+
+
 
 
 	@Override
