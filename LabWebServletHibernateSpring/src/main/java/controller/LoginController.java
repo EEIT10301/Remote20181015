@@ -48,7 +48,7 @@ public class LoginController {
 		
 //根據model執行結果，導向view
 		if(bean==null) {
-			errors.put("password", "Login failed, please try again.");
+			errors.put("password", "Login failed, please try again(2).");
 			return "login.errors";
 		} else {
 			model.addAttribute("user", bean);
