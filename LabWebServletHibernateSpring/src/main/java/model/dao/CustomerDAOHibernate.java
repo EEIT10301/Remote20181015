@@ -5,10 +5,6 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 
-<<<<<<< HEAD
-=======
-
->>>>>>> branch 'master' of https://github.com/EEIT10301/Remote20181015.git
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.stereotype.Repository;
@@ -36,12 +32,9 @@ public class CustomerDAOHibernate implements CustomerDAO {
 		CustomerBean select = customerDao.select("Alex");
 		System.out.println("select="+select);
 
-<<<<<<< HEAD
-		sessionFactory.getCurrentSession().getTransaction().commit();
-=======
+
 		sessionFactory.getCurrentSession().getTransaction().commit();
 
->>>>>>> branch 'master' of https://github.com/EEIT10301/Remote20181015.git
 	}
 	@Override
 	public CustomerBean select(String custid) {

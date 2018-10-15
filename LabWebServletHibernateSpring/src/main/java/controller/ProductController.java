@@ -6,39 +6,6 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 
-<<<<<<< HEAD
-
-
-
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.propertyeditors.CustomDateEditor;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.i18n.LocaleContextHolder;
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.WebDataBinder;
-import org.springframework.web.bind.annotation.InitBinder;
-import org.springframework.web.bind.annotation.RequestMapping;
-
-import misc.PrimitiveNumberEditor;
-import model.ProductBean;
-import model.ProductService;
-
-@Controller
-public class ProductController {
-	@InitBinder
-	public void registerPropertyEditor(WebDataBinder webDataBinder) {
-		webDataBinder.registerCustomEditor(java.util.Date.class,
-				new CustomDateEditor(new SimpleDateFormat("yyyy-MM-dd"), true));
-		webDataBinder.registerCustomEditor(double.class,
-				"price", new PrimitiveNumberEditor(Double.class, true));
-		webDataBinder.registerCustomEditor(int.class,
-				new PrimitiveNumberEditor(Integer.class, true));
-	}
-	
-=======
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.propertyeditors.CustomDateEditor;
 import org.springframework.context.ApplicationContext;
@@ -64,7 +31,7 @@ public class ProductController {
 		webDataBinder.registerCustomEditor(int.class, new PrimitiveNumberEditor(Integer.class, true));
 	}
 
->>>>>>> branch 'master' of https://github.com/EEIT10301/Remote20181015.git
+
 	@Autowired
 	private ApplicationContext ctx;
 
@@ -139,10 +106,7 @@ public class ProductController {
 			errors.put("action", "Unknown Action:" + prodaction);
 			return "product.errors";
 		}
-<<<<<<< HEAD
 
 	}
-=======
-	}
->>>>>>> branch 'master' of https://github.com/EEIT10301/Remote20181015.git
+
 }

@@ -38,10 +38,6 @@ public class ProductDAOHibernate implements ProductDAO {
 
 		sessionFactory.getCurrentSession().getTransaction().commit();
 
-<<<<<<< HEAD
-=======
-
->>>>>>> branch 'master' of https://github.com/EEIT10301/Remote20181015.git
 	}
 
 	@Override

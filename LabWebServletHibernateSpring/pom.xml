@@ -19,14 +19,7 @@
 
 
 	<dependency>
-<<<<<<< HEAD
 
-		    <groupId>org.springframework</groupId>
-		    <artifactId>spring-webmvc</artifactId>
-		    <version>5.1.0.RELEASE</version>
-		</dependency>
-	
-=======
 		    <groupId>org.springframework</groupId>
 		    <artifactId>spring-webmvc</artifactId>
 		    <version>5.1.0.RELEASE</version>
@@ -38,7 +31,7 @@
 		</dependency>
 
 
->>>>>>> branch 'master' of https://github.com/EEIT10301/Remote20181015.git
+
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-orm</artifactId>
