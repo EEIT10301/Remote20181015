@@ -2,7 +2,11 @@
 <Context>
 	<Resource name="jdbc/xxx" auth="Container" type="javax.sql.DataSource"
                maxTotal="100" maxIdle="30" maxWaitMillis="10000"
+<<<<<<< HEAD
                username="sa" password="sa123456"
+=======
+               username="sa" password="passw0rd"
+>>>>>>> branch 'master' of https://github.com/EEIT10301/Remote20181015.git
                driverClassName="com.microsoft.sqlserver.jdbc.SQLServerDriver"
                url="jdbc:sqlserver://localhost:1433;database=java"/>
 </Context>
