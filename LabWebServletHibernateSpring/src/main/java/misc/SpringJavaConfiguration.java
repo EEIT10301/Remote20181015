@@ -2,27 +2,7 @@ package misc;
 
 import java.util.Properties;
 
-<<<<<<< HEAD
-import javax.naming.NamingException;
-import javax.sql.DataSource;
 
-import org.hibernate.SessionFactory;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.ConfigurableApplicationContext;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.jndi.JndiObjectFactoryBean;
-import org.springframework.orm.hibernate5.LocalSessionFactoryBuilder;
-
-import model.CustomerBean;
-import model.ProductBean;
-
-@Configuration
-@ComponentScan(basePackages={"model"})
-public class SpringJavaConfiguration {
-=======
 import javax.annotation.PostConstruct;
 import javax.naming.NamingException;
 import javax.sql.DataSource;
@@ -44,7 +24,6 @@ import model.ProductBean;
 @ComponentScan(basePackages={"model"})
 public class SpringJavaConfiguration {
 	
->>>>>>> branch 'master' of https://github.com/EEIT10301/Remote20181015.git
 	@Bean
 	public DataSource dataSource() {
 		JndiObjectFactoryBean factory = new JndiObjectFactoryBean();
