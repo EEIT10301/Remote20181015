@@ -22,6 +22,7 @@ public class LoginController {
 	private CustomerService customerService;
 	
 	@Autowired
+<<<<<<< HEAD
 	private ApplicationContext context;
 	
 	@RequestMapping("/secure/login.controller")
@@ -38,6 +39,43 @@ public class LoginController {
 		if(password==null || password.length()==0) {
 			errors.put("password",
 					context.getMessage("login.password.required", null, locale));
+=======
+<<<<<<< HEAD
+	private ApplicationContext context;
+	
+	@RequestMapping("/secure/login.controller")
+	public String method(String username, String password, Model model, Locale locale) {
+//接收資料
+//驗證資料
+		Map<String, String> errors = new HashMap<String, String>();
+		model.addAttribute("errors", errors);
+		
+		if(username==null || username.length()==0) {
+			errors.put("username",
+					context.getMessage("login.username.required", null, locale));
+		}
+		if(password==null || password.length()==0) {
+			errors.put("password",
+					context.getMessage("login.password.required", null, locale));
+=======
+	private ApplicationContext ctx;
+	
+	@RequestMapping("/secure/login.controller")
+	public String method(String username, String password, Model model, Locale locale) {
+//接收資料
+//驗證資料
+		Map<String, String> errors = new HashMap<String, String>();
+		model.addAttribute("errors", errors);
+		
+		if(username==null || username.length()==0) {
+			errors.put("username",
+					ctx.getMessage("login.username.required", null, locale));
+		}
+		if(password==null || password.length()==0) {
+			errors.put("password",
+					ctx.getMessage("login.password.required", null, locale));
+>>>>>>> branch 'master' of https://github.com/EEIT10301/Remote20181015.git
+>>>>>>> branch 'master' of https://github.com/EEIT10301/Remote20181015.git
 		}
 		
 		if(errors!=null && !errors.isEmpty()) {
