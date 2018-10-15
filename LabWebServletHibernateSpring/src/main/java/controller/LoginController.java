@@ -37,7 +37,7 @@ public class LoginController {
 		}
 		if(password==null || password.length()==0) {
 			String error=context.getMessage("login.password.required", null, locale);
-			errors.put("password", error);
+			errors.put("passwordss", error);
 		}
 		
 		if(errors!=null && !errors.isEmpty()) {
