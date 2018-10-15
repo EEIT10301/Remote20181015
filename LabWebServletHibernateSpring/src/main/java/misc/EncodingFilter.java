@@ -23,16 +23,7 @@ public class EncodingFilter implements Filter {
 		HttpServletRequest request = (HttpServletRequest) req;
 		HttpServletResponse response = (HttpServletResponse) resp;
 
-<<<<<<< HEAD
-		request.setCharacterEncoding("UTF-8");
-		chain.doFilter(request, response);
-	}
-	private FilterConfig filterConfig;
-	@Override
-	public void init(FilterConfig filterConfig) throws ServletException {
-		this.filterConfig = filterConfig;
-	}
-=======
+
 		System.out.println("Servlet執行之前的前置作業");
 		request.setCharacterEncoding("UTF-8");
 //		if(前置作業：我不滿意) {
@@ -59,7 +50,7 @@ public class EncodingFilter implements Filter {
 		this.filterConfig = filterConfig;
 	}
 	
->>>>>>> branch 'master' of https://github.com/EEIT10301/Remote20181015.git
+
 	@Override
 	public void destroy() {
 
