@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
 import org.springframework.stereotype.Repository;
 
 import misc.SpringJavaConfiguration;
@@ -23,6 +24,7 @@ public class ProductDAOHibernate implements ProductDAO {
 	public Session getSession() {
 		return this.sessionFactory.getCurrentSession();
 	}
+
 	public static void main(String[] args) {
 		ApplicationContext context =
 				new AnnotationConfigApplicationContext(SpringJavaConfiguration.class);
@@ -37,6 +39,7 @@ public class ProductDAOHibernate implements ProductDAO {
 		sessionFactory.getCurrentSession().getTransaction().commit();
 
 	}
+
 	@Override
 	public ProductBean select(int id) {
 		return this.getSession().get(ProductBean.class, id);

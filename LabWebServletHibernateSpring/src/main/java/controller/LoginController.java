@@ -5,7 +5,8 @@ import java.util.Locale;
 import java.util.Map;
 
 
-import javax.servlet.http.HttpSession;
+
+
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
@@ -47,6 +48,7 @@ public class LoginController {
 		}
 		//呼叫model
 		CustomerBean bean = customerService.login(username, password);
+
 				
 		//根據model執行結果，導向view
 				if(bean==null) {
@@ -59,7 +61,7 @@ public class LoginController {
 					return "login.success";
 					
 				}
-			
+
 
 	}
 }

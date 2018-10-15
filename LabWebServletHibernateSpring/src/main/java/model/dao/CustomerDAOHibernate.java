@@ -32,6 +32,7 @@ public class CustomerDAOHibernate implements CustomerDAO {
 		CustomerBean select = customerDao.select("Alex");
 		System.out.println("select="+select);
 
+
 		sessionFactory.getCurrentSession().getTransaction().commit();
 
 	}
