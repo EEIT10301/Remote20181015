@@ -3,22 +3,7 @@ package misc;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
 public class MyDispatcherServletInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
-<<<<<<< HEAD
-	@Override
-	protected Class<?>[] getRootConfigClasses() {
-		System.out.println("ContextLoaderListener");
-		return new Class[] {SpringJavaConfiguration.class};
-	}
-	@Override
-	protected Class<?>[] getServletConfigClasses() {
-		System.out.println("DispatcherServlet");
-		return new Class[] {SpringMvcJavaConfiguration.class};
-	}
-	@Override
-	protected String[] getServletMappings() {
-		return new String[] {"/"};
-	}
-=======
+
 
 	@Override
 	protected Class<?>[] getRootConfigClasses() {
@@ -58,5 +43,5 @@ public class MyDispatcherServletInitializer extends AbstractAnnotationConfigDisp
 //    <servlet-name>DispatcherServlet</servlet-name>
 //    <url-pattern>/</url-pattern>
 //  </servlet-mapping>
->>>>>>> branch 'master' of https://github.com/EEIT10301/Remote20181015.git
+
 }
