@@ -6,6 +6,7 @@ import java.util.List;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+<<<<<<< HEAD
 import org.springframework.stereotype.Repository;
 
 import model.ProductBean;
@@ -18,6 +19,36 @@ public class ProductDAOHibernate implements ProductDAO {
 
 	public Session getSession() {
 		return this.sessionFactory.getCurrentSession();
+=======
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.stereotype.Repository;
+
+import misc.SpringJavaConfiguration;
+import model.ProductBean;
+import model.ProductDAO;
+
+@Repository
+public class ProductDAOHibernate implements ProductDAO {
+	@Autowired
+	private SessionFactory sessionFactory;
+
+	public Session getSession() {
+		return this.sessionFactory.getCurrentSession();
+	}
+	public static void main(String[] args) {
+		ApplicationContext context =
+				new AnnotationConfigApplicationContext(SpringJavaConfiguration.class);
+		
+		SessionFactory sessionFactory = (SessionFactory) context.getBean("sessionFactory");
+		sessionFactory.getCurrentSession().beginTransaction();
+
+		ProductDAO productDAO = (ProductDAO) context.getBean("productDAOHibernate");
+		List<ProductBean> selects = productDAO.select();
+		System.out.println("selects="+selects);
+
+		sessionFactory.getCurrentSession().getTransaction().commit();
+>>>>>>> branch 'master' of https://github.com/EEIT10301/Remote20181015.git
 	}
 	@Override
 	public ProductBean select(int id) {
