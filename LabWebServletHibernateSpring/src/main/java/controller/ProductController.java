@@ -34,7 +34,7 @@ public class ProductController {
 	}
 	
 	@Autowired
-	private ApplicationContext c;
+	private ApplicationContext ctx;
 
 	@Autowired
 	private ProductService productService;
@@ -66,7 +66,7 @@ public class ProductController {
 		if("Insert".equals(prodaction) || "Update".equals(prodaction) || "Delete".equals(prodaction)) {
 			if(id==null || id.length()==0) {
 				Locale locale = LocaleContextHolder.getLocale();
-				errors.put("xxx1", c.getMessage(
+				errors.put("xxx1", ctx.getMessage(
 						"product.id.required", new String[] {prodaction}, locale));
 			}
 		}
